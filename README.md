@@ -1,4 +1,4 @@
-# kata-python
+# kata-java
 _Kolekcja krótkich programów, struktur danych, algorytmów zaimplementowanych w języku Java._
 
 Podstawy programowania w języku Java
