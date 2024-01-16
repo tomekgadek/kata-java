@@ -46,4 +46,5 @@ class Main {
  * java Main
  * 
  * JVM poszukuje w klasie 'Main' metody z takim nagłówkiem: 'public static void main(String[] args)'
-*/
+ * 
+ */
