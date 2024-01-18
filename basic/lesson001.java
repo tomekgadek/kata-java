@@ -1,4 +1,4 @@
-/** Pierwszy program w języku Java */
+/** Pierwszy program w języku Java. */
 
 class Main {
     public static void main(String[] args) {

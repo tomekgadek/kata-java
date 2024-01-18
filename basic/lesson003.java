@@ -1,4 +1,4 @@
-/** Konwencje nazewnicze w języku Java */
+/** Konwencje nazewnicze w języku Java. */
 
 /*
     Nazwy klas zaczynamy od wielkiej litery. Kolejne słowa wchodzące w skład nazwy
@@ -13,7 +13,7 @@ class Main {
     public static void main(String[] args) {
 
         /*
-            Nazwy metod zaczynamy od małej litery. Kolejne słowa wchodzące w skład nazwy
+            Nazwy zmiennych zaczynamy od małej litery. Kolejne słowa wchodzące w skład nazwy
             piszemy wielką literą.
         */
         int age = 18;
@@ -23,9 +23,10 @@ class Main {
             podkreślenia.
         */
         final double PI = 3.14;
+        final int MONITOR_RESOLUTION_X = 1024;
+        final int MONITOR_RESOLUTION_Y = 768;
 
         System.out.printf("Age: %d \n", age);
         System.out.printf("PI: %.2f \n", PI);
     }
 }
-
