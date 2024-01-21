@@ -14,4 +14,5 @@ Podstawy programowania w języku Java
 
 Zadania
 ----------------------------
-001. [Implementacja silni w wersji iteracyjnej oraz rekurencyjnej](/tasks/factorial.java).
+001. [Implementacja silni w wersji iteracyjnej oraz rekurencyjnej](/tasks/factorial.java),
+002. [Symulacja rzutu monetą](/tasks/coin.java).
