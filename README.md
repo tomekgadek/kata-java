@@ -8,7 +8,8 @@ Podstawy programowania w języku Java
 002. [Z jakich elementów składa się funkcja main()?](/basic/lesson002.java),
 003. [Konwencje nazewnicze w języku Java](/basic/lesson003.java),
 004. [Pierwszy obiekt](/basic/lesson004.java),
-005. [Komentarze w kodzie](/basic/lesson005.java).
+005. [Komentarze w kodzie](/basic/lesson005.java),
+006. [Typy pierwotne](/basic/lesson006.java).
 
 Zadania
 ----------------------------
