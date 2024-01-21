@@ -9,7 +9,8 @@ Podstawy programowania w języku Java
 003. [Konwencje nazewnicze w języku Java](/basic/lesson003.java),
 004. [Pierwszy obiekt](/basic/lesson004.java),
 005. [Komentarze w kodzie](/basic/lesson005.java),
-006. [Typy pierwotne](/basic/lesson006.java).
+006. [Typy pierwotne](/basic/lesson006.java),
+007. [Zmienne](/basic/lesson007.java).
 
 Zadania
 ----------------------------
