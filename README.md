@@ -18,4 +18,5 @@ Zadania
 002. [Symulacja rzutu monetą](/tasks/coin.java),
 003. [Zastosowanie interfejsów na przykładzie kontrolera do gier](/tasks/joystick.java),
 004. [Jak odczytać dane ze standardowego wejścia?](/tasks/readDataFromStandardInput.java),
-005. [Jak odczytać ciąg tekstowy ze standardowego wejścia?](/tasks/readTextFromStandardInput.java).
+005. [Jak odczytać ciąg tekstowy ze standardowego wejścia?](/tasks/readTextFromStandardInput.java),
+006. [Jak odczytać dane z pliku?](/tasks/readDataFromFile.java).
