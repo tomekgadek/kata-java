@@ -20,4 +20,5 @@ Zadania
 004. [Jak odczytać dane ze standardowego wejścia?](/tasks/readDataFromStandardInput.java),
 005. [Jak odczytać ciąg tekstowy ze standardowego wejścia?](/tasks/readTextFromStandardInput.java),
 006. [Jak odczytać dane z pliku tekstowego?](/tasks/readDataFromFile.java),
-007. [Jak zapisać dane do pliku tekstowego?](/tasks/saveDataToFile.java).
+007. [Jak zapisać dane do pliku tekstowego?](/tasks/saveDataToFile.java),
+008. [Polimorfizm na przykładzie figur geometrycznych](/tasks/figures.java).
