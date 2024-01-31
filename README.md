@@ -22,4 +22,5 @@ Zadania
 006. [Jak odczytać dane z pliku tekstowego?](/tasks/readDataFromFile.java),
 007. [Jak zapisać dane do pliku tekstowego?](/tasks/saveDataToFile.java),
 008. [Polimorfizm na przykładzie figur geometrycznych](/tasks/figures.java),
-009. [Jak wygląda tablica obiektów?](/tasks/arrayOfEmployees.java).
+009. [Jak wygląda tablica obiektów?](/tasks/arrayOfEmployees.java),
+010. [Jak działa metoda o zmiennej liczbie argumentów?](/tasks/varargs.java).
