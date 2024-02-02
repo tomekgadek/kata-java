@@ -24,4 +24,5 @@ Zadania
 008. [Polimorfizm na przykładzie figur geometrycznych](/tasks/figures.java),
 009. [Jak wygląda tablica obiektów?](/tasks/arrayOfEmployees.java),
 010. [Jak działa metoda o zmiennej liczbie argumentów?](/tasks/varargs.java),
-011. [Jak przeciążyć nazwę funkcji?](/tasks/overloading.java).
+011. [Jak przeciążyć nazwę funkcji?](/tasks/overloading.java),
+012. [Polimorfizm a punkty w przestrzeni](/tasks/points.java).
