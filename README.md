@@ -26,3 +26,7 @@ Zadania
 010. [Jak działa metoda o zmiennej liczbie argumentów?](/tasks/varargs.java),
 011. [Jak przeciążyć nazwę funkcji?](/tasks/overloading.java),
 012. [Polimorfizm a punkty w przestrzeni](/tasks/points.java).
+
+Wzorce projektowe
+----------------------------
+001. [Kreacyjny wzorzec projektowy: Metoda wytwórcza (Factory method)](/patterns/facroryMethod.java).
