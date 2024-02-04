@@ -25,7 +25,8 @@ Zadania
 009. [Jak wygląda tablica obiektów?](/tasks/arrayOfEmployees.java),
 010. [Jak działa metoda o zmiennej liczbie argumentów?](/tasks/varargs.java),
 011. [Jak przeciążyć nazwę funkcji?](/tasks/overloading.java),
-012. [Polimorfizm a punkty w przestrzeni](/tasks/points.java).
+012. [Polimorfizm a punkty w przestrzeni](/tasks/points.java),
+013. [Generator ciągu Fibonacciego](/tasks/fibonacci.java).
 
 Wzorce projektowe
 ----------------------------

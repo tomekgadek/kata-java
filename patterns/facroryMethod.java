@@ -1,5 +1,10 @@
 /** Kreacyjny wzorzec projektowy: Metoda wytwórcza (Factory method). */
 
+/*
+ * Jego celem jest dostarczenie interfejsu do tworzenia obiektów nieokreślonych
+ * jako powiązanych typów. Tworzeniem egzemplarzy zajmują się podklasy.
+ */
+
 abstract class Pizza {
 
     protected String name;
