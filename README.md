@@ -32,3 +32,7 @@ Wzorce projektowe
 ----------------------------
 001. [Kreacyjny wzorzec projektowy: Metoda wytwórcza (Factory method)](/patterns/facroryMethod.java),
 002. [Kreacyjny wzorzec projektowy: Singleton](/patterns/singleton.java).
+
+Graficzny interfejs użytkownika, Swing i AWT
+----------------------------
+001. [Pierwsze okienko](/ui/firstWindow.java).
