@@ -40,4 +40,5 @@ Graficzny interfejs użytkownika, Swing i AWT
 003. [Sposoby rozmieszczania elementów wewnątrz ramki](/ui/layout.java),
 004. [Obsługa zdarzeń z klawiatury](/ui/keyboard.java),
 005. [Zdarzenia myszy](/ui/mouseEvents.java),
-006. [Wykorzystanie myszki w grafice 2D](/ui/mouse2d.java).
+006. [Wykorzystanie myszki w grafice 2D](/ui/mouse2d.java),
+007. [Obsługa przycisków](/ui/buttons.java).
