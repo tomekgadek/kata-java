@@ -41,4 +41,5 @@ Graficzny interfejs użytkownika, Swing i AWT
 004. [Obsługa zdarzeń z klawiatury](/ui/keyboard.java),
 005. [Zdarzenia myszy](/ui/mouseEvents.java),
 006. [Wykorzystanie myszki w grafice 2D](/ui/mouse2d.java),
-007. [Obsługa przycisków](/ui/buttons.java).
+007. [Obsługa przycisków](/ui/buttons.java),
+008. [Obsługa obrazków](/ui/images.java).
