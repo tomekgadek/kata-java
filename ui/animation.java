@@ -26,6 +26,12 @@ class Ball {
         this.y = -45;
     }
 
+    Ball(int x, int y) {
+        this();
+        this.x = x;
+        this.y = y;
+    }
+
     Image loadImage() {
         return this.ball;
     }
@@ -61,6 +67,9 @@ class BoardPanel extends JPanel implements ActionListener {
     private static final int WIDTH = 400;
     private static final int HEIGHT = 400;
 
+    private double angle = 90;
+    private double radius = 155;
+
     private Ball ball;
     private Timer timer;
 
@@ -81,13 +90,13 @@ class BoardPanel extends JPanel implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        
-        ball.bottom(1);
-        ball.right(1);
+        // ruch po okręgu
+        int x = (int) ((getWidth() - 45) / 2 + radius * Math.cos(angle));
+        int y = (int) ((getHeight() - 45) / 2 + radius * Math.sin(angle));
 
-        if(ball.getY() > HEIGHT) {
-            ball = new Ball();
-        }
+        ball = new Ball(x, y);
+
+        angle += 0.01;
 
         repaint();
     }
