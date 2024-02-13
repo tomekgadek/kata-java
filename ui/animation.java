@@ -22,8 +22,8 @@ class Ball {
     Ball() {
         ImageIcon ballIcon = new ImageIcon("../static/ui_file_002.png");
         ball = ballIcon.getImage();
-        this.x = -45;
-        this.y = -45;
+        this.x = 0;
+        this.y = 0;
     }
 
     Ball(int x, int y) {
@@ -73,6 +73,8 @@ class BoardPanel extends JPanel implements ActionListener {
     private Ball ball;
     private Timer timer;
 
+    private int directionNumber = 1;
+
     BoardPanel(final Ball ball) {
         this.ball = ball;
         setBackground(Color.GRAY);
@@ -85,18 +87,30 @@ class BoardPanel extends JPanel implements ActionListener {
 
     public void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
+
         graphics.drawImage(ball.loadImage(), ball.getX(), ball.getY(), this);
+        
         Toolkit.getDefaultToolkit().sync();
     }
 
     public void actionPerformed(ActionEvent e) {
         // ruch po okręgu
-        int x = (int) ((getWidth() - 45) / 2 + radius * Math.cos(angle));
-        int y = (int) ((getHeight() - 45) / 2 + radius * Math.sin(angle));
+        /*int x = (int) ((getWidth() - ball.loadImage().getWidth(null)) / 2 + radius * Math.cos(angle));
+        int y = (int) ((getHeight() - ball.loadImage().getHeight(null)) / 2 + radius * Math.sin(angle));
 
         ball = new Ball(x, y);
 
-        angle += 0.01;
+        angle += 0.01;*/
+
+        // ruch od rogu do rogu
+        ball.bottom(directionNumber);
+        ball.right(directionNumber);
+
+        if(ball.getY() > WIDTH - ball.loadImage().getWidth(null)) {
+            directionNumber = -1;
+        } else if(ball.getY() < 0) {
+            directionNumber = 1;
+        }
 
         repaint();
     }
