@@ -32,7 +32,8 @@ Zadania
 Wzorce projektowe
 ----------------------------
 001. [Kreacyjny wzorzec projektowy: Metoda wytwórcza (Factory method)](/patterns/facroryMethod.java),
-002. [Kreacyjny wzorzec projektowy: Singleton](/patterns/singleton.java).
+002. [Kreacyjny wzorzec projektowy: Singleton](/patterns/singleton.java),
+003. [Architektoniczny wzorzec projektowy: Model-View-Controller (MVC)](/patterns/mvc.java).
 
 Graficzny interfejs użytkownika, Swing i AWT
 ----------------------------
