@@ -34,7 +34,7 @@ class Main {
 
         var factorial = new Factorial();
         
-        for(int digit = 1; digit <= 20; digit++) {
+        for(int digit = 1; digit <= LIMIT; digit++) {
 
             System.out.printf("%d\t%f \n", 
                 digit, Math.log(factorial.calculate(digit))
