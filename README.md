@@ -46,3 +46,9 @@ Graficzny interfejs użytkownika, Swing i AWT
 007. [Obsługa przycisków](/ui/buttons.java),
 008. [Obsługa obrazków](/ui/images.java),
 009. [Animacja](/ui/animation.java).
+
+Laboratorium online
+----------------------------
+_Zbiór prostych programów zaimplementowanych w języku Java._
+
++ [Laboratorium 01: Logarytm naturalny z silni](./lab/lab01.java).

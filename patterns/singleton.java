@@ -1,4 +1,4 @@
-/** Kreacyjny wzorzec projektowy: Singleton.*/
+/** Kreacyjny wzorzec projektowy: Singleton. */
 
 /*
  * Jego celem jest ograniczenie możliwości tworzenia obiektów danej klasy do jednej instancji oraz
