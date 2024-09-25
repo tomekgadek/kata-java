@@ -43,9 +43,10 @@ class Triangle {
         double c = distanceCalculator.calculate(p3, p1);
 
         /* 
-            Mozliwosc zbudowania trojkata oparta o tzw. 'nierownosci trojkata', ktora
-            mowi, ze dla sumy dlugosci dwoch dowolnych bokow musi byc wieksza niz
-            dlugosc trzeciego boku.
+            Twierdzenie matematyczne:
+
+            Suma dlugosci dwoch dowolnych bokow musi byc wieksza niz
+            dlugosc trzeciego boku - tzw. 'nierownosc trojkata'.
         */
         if(a < b+c && b < a+c && c < b+a) {
             return a + b + c;
