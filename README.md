@@ -52,4 +52,5 @@ Laboratorium online
 _Zbiór prostych programów zaimplementowanych w języku Java._
 
 + [Laboratorium 01: Logarytm naturalny z silni](./lab/lab01.java),
-+ [Laboratorium 02: Obwód trójkąta](./lab/lab02.java).
++ [Laboratorium 02: Obwód trójkąta](./lab/lab02.java),
++ [Laboratorium 03: Macierz symetryczna](./lab/lab03.java).
