@@ -8,10 +8,9 @@ class Main {
 
     public static void main(String[] args) {
 
-        try {
+        File file = new File("../static/task_file_001.txt");
 
-            File file = new File("../static/task_file_001.txt");
-            Scanner scanner = new Scanner(file);
+        try(Scanner scanner = new Scanner(file)) {
 
             String firstLine = scanner.nextLine(); // first line
             System.out.println(firstLine);
@@ -20,13 +19,11 @@ class Main {
                 System.out.println(scanner.nextLine()); // other lines
             }
 
-            scanner.close();
+            System.out.println();
+            System.out.println("Done.");
 
         } catch(FileNotFoundException e) {
             e.printStackTrace();
-        } finally {
-            System.out.println();
-            System.out.println("Done.");
         }
     }
 }

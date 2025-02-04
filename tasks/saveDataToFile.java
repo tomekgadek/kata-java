@@ -48,20 +48,16 @@ class Main {
 
     public static void main(String[] args) {
 
-        try {
-
-            PrintWriter file = new PrintWriter("../static/task_file_002.txt");
+        try(PrintWriter file = new PrintWriter("../static/task_file_002.txt");) {
 
             file.println(new Square(9));
-            file.close();
+
+            System.out.println();
+            System.out.println("Done.");
 
         } catch(FileNotFoundException e) {
 
             e.printStackTrace();
-        } finally {
-
-            System.out.println();
-            System.out.println("Done.");
         }
     }
 }
