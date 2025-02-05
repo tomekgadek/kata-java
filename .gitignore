@@ -1,3 +1,7 @@
 key.txt
 
 *.class
+
+.idea
+
+target
