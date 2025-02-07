@@ -1,17 +1,17 @@
 package pl.unittest.first_lab;
 
 /*
-  Laboratorium 01:
+    Laboratorium 01:
 
-  Napisz program, ktory oblicza logarytm naturalny z silni kolejnych
-  liczb calkowitych od 1 do 20. Wyswietl wynik wraz z wartoscia logarytmu
-  naturalnego silni.
+    Napisz program, ktory oblicza logarytm naturalny z silni kolejnych
+    liczb calkowitych od 1 do 20. Wyswietl wynik wraz z wartoscia logarytmu
+    naturalnego silni.
 
-  Przykladowy rezultat dzialania programu:
+    Przykladowy rezultat dzialania programu:
 
-  1    0.0
-  2    0,693147
-  ...
+    1    0.0
+    2    0,693147
+    ...
  */
 
 class Factorial {
