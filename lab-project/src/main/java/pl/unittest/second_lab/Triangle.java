@@ -11,11 +11,11 @@ package pl.unittest.second_lab;
       TAK, oblicza jego obwod. W przeciwnym wypadku program powinien poinformowac
       uzytkownika, ze trojkat nie moze zostac skonstruowany.
 
-      Przykladowy rezultat dzialania programu:
+    Przykladowy rezultat dzialania programu:
 
-      Odleglosc p1-p2: 3,605551
-      Obwod trojkata p1-p2-p3: 11,672571
- */
+    Odleglosc p1-p2: 3,605551
+    Obwod trojkata p1-p2-p3: 11,672571
+*/
 
 class Triangle {
 
