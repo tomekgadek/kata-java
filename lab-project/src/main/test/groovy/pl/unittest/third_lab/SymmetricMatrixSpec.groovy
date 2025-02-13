@@ -3,6 +3,8 @@ package pl.unittest.third_lab
 import spock.lang.Specification
 import spock.lang.Unroll
 
+// TODO: Tetsy do poprawy!!!
+
 class SymmetricMatrixSpec extends Specification {
 
     @Unroll
