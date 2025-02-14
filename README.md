@@ -43,4 +43,4 @@ _Zbiór prostych programów zaimplementowanych w języku Java._
 + [Laboratorium 01: Logarytm naturalny z silni](./lab-project/src/main/java/pl/unittest/first_lab/Factorial.java),
 + [Laboratorium 02: Obwód trójkąta](./lab-project/src/main/java/pl/unittest/second_lab/Triangle.java),
 + [Laboratorium 03: Macierz symetryczna](./lab-project/src/main/java/pl/unittest/third_lab/SymmetricMatrix.java),
-+ [Laboratorium 04: Macierz rzadka](./lab/lab04.java).
++ [Laboratorium 04: Macierz rzadka](./lab-project/src/main/java/pl/unittest/fourth_lab/SparseMatrix.java).
