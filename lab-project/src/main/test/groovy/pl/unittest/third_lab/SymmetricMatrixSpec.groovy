@@ -1,31 +1,48 @@
 package pl.unittest.third_lab
 
 import spock.lang.Specification
-import spock.lang.Unroll
-
-// TODO: Tetsy do poprawy!!!
 
 class SymmetricMatrixSpec extends Specification {
 
-    @Unroll
-    def "should correctly set and get matrix values"(int row, int col, int value) {
+    def "should correctly store and retrieve values in a symmetric matrix"() {
+        given: "A symmetric matrix of size 3"
+        def matrix = new SymmetricMatrix(3)
+
+        when: "Setting symmetric values in the matrix"
+        matrix.set(1, 1, 2)
+        matrix.set(2, 2, 6)
+        matrix.set(3, 3, 9)
+        matrix.set(3, 1, 3)
+        matrix.set(2, 3, 7)
+        matrix.set(1, 2, 1)
+
+        then: "Matrix should maintain symmetry"
+        matrix.get(1, 1) == 2
+        matrix.get(2, 2) == 6
+        matrix.get(3, 3) == 9
+        matrix.get(3, 1) == 3
+        matrix.get(1, 3) == 3
+        matrix.get(2, 3) == 7
+        matrix.get(3, 2) == 7
+        matrix.get(1, 2) == 1
+        matrix.get(2, 1) == 1
+    }
+
+    def "should correctly verify symmetric matrix property"() {
         given: "A symmetric matrix of size 3"
         def matrix = new SymmetricMatrix(3)
 
         when: "Setting values in the matrix"
-        matrix.set(row, col, value)
+        matrix.set(1, 2, 5)
+        matrix.set(2, 3, 8)
+        matrix.set(3, 1, 4)
 
-        then: "Values should be retrieved correctly"
-        matrix.get(row, col) == value
-        matrix.get(col, row) == value // Symmetric property
-
-        where:
-        row | col | value
-        1   | 1   | 2
-        2   | 2   | 6
-        3   | 3   | 9
-        3   | 1   | 3
-        2   | 3   | 7
-        1   | 2   | 1
+        then: "Values should be symmetric"
+        matrix.get(1, 2) == 5
+        matrix.get(2, 1) == 5
+        matrix.get(2, 3) == 8
+        matrix.get(3, 2) == 8
+        matrix.get(3, 1) == 4
+        matrix.get(1, 3) == 4
     }
 }
