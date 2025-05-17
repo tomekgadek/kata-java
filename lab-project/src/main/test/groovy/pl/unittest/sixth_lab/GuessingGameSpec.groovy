@@ -1,7 +1,6 @@
 package pl.unittest.sixth_lab
 
-import pl.unittest.sixth.GuessingGameImpl
-import pl.unittest.sixth.Search
+
 import spock.lang.*
 
 class GuessingGameSpec extends Specification {

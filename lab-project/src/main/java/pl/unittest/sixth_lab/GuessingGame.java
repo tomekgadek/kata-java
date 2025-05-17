@@ -1,4 +1,4 @@
-package pl.unittest.sixth;
+package pl.unittest.sixth_lab;
 
 import java.util.Random;
 
