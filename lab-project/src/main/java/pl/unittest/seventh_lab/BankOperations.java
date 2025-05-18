@@ -1,5 +1,8 @@
 package pl.unittest.seventh_lab;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /*
     Twoim zadaniem będzie zaimplementowanie klasy, która realizuje funkcjonalności
     określone w interfejsie BankOperations. Interfejs ten definiuje podstawowe
@@ -35,4 +38,76 @@ public interface BankOperations {
 
     /** Zwraca stan skarbca czyli sume stanow wszystkich kont */
     int getTreasuryBalance();
+}
+
+class Bank implements BankOperations {
+    private final Map<Integer, Integer> accounts = new HashMap<>();
+    private int nextAccountNumber = 1;
+
+    @Override
+    public int createAccount() {
+        int accountNumber = nextAccountNumber++;
+        accounts.put(accountNumber, 0);
+        return accountNumber;
+    }
+
+    @Override
+    public int closeAccount(int accountNumber) {
+        if (!accounts.containsKey(accountNumber)) {
+            return -1;
+        }
+
+        int balance = accounts.get(accountNumber);
+        accounts.remove(accountNumber);
+        return balance;
+    }
+
+    @Override
+    public boolean deposit(int accountNumber, int amount) {
+        if (amount <= 0 || !accounts.containsKey(accountNumber)) {
+            return false;
+        }
+
+        accounts.put(accountNumber, accounts.get(accountNumber) + amount);
+        return true;
+    }
+
+    @Override
+    public boolean withdraw(int accountNumber, int amount) {
+        if (amount <= 0 || !accounts.containsKey(accountNumber)) {
+            return false;
+        }
+
+        int currentBalance = accounts.get(accountNumber);
+        if (currentBalance < amount) return false;
+        accounts.put(accountNumber, currentBalance - amount);
+        return true;
+    }
+
+    @Override
+    public boolean transfer(int fromAccount, int toAccount, int amount) {
+        if (fromAccount == toAccount) {
+            return false;
+        }
+
+        if (!accounts.containsKey(fromAccount) || !accounts.containsKey(toAccount)) {
+            return false;
+        }
+
+        if (!withdraw(fromAccount, amount)) {
+            return false;
+        }
+
+        return deposit(toAccount, amount);
+    }
+
+    @Override
+    public int getBalance(int accountNumber) {
+        return accounts.getOrDefault(accountNumber, -1);
+    }
+
+    @Override
+    public int getTreasuryBalance() {
+        return accounts.values().stream().mapToInt(Integer::intValue).sum();
+    }
 }
