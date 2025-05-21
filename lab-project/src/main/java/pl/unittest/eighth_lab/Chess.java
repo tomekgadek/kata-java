@@ -3,16 +3,17 @@ package pl.unittest.eighth_lab;
 /*
     Na podstawie interfejsu GameRules zaimplementuj dwie klasy: Hetman oraz Konik.
     Obie klasy powinny implementować interfejs GameRules i definiować metodę isValidMove
-    zgodnie z zasadami poruszania się odpowiednio hetmana i konika (skoczka) w szachach.
+    zgodnie z zasadami poruszania się odpowiednio hetmana (Queen) i konika (Knight) w szachach.
  */
 
-
-
 interface GameRules {
-    record Point(int x, int y) {}
+    record Point(int x, int y) {
+    }
 
-    /** Metoda zwraca true, tylko gdy przejscie z polozenia source(x, y) do destination(x, y)
-     w jednym ruchu jest zgodne z zasadami gry w szachy */
+    /**
+     * Metoda zwraca true, tylko gdy przejscie z polozenia source(x, y) do destination(x, y)
+     * w jednym ruchu jest zgodne z zasadami gry w szachy
+     */
     boolean isValidMove(final Point source, final Point destination);
 
     class Knight implements GameRules {
@@ -20,6 +21,8 @@ interface GameRules {
         public boolean isValidMove(final Point source, final Point destination) {
             int deltaX = Math.abs(destination.x() - source.x());
             int deltaY = Math.abs(destination.y() - source.y());
+
+            System.out.println("Knight deltaX = " + deltaX + ", deltaY = " + deltaY);
 
             return (deltaX == 2 && deltaY == 1) || (deltaX == 1 && deltaY == 2);
         }
@@ -36,19 +39,4 @@ interface GameRules {
         }
 
     }
-
-    class Main {
-
-        public static void main(String[] args) {
-            GameRules.Queen q = new GameRules.Queen();
-            GameRules.Knight k = new GameRules.Knight();
-
-            System.out.println( "HETMAN: " + q.isValidMove( new Point(1,1), new Point(2,2)));
-            System.out.println( "KONIK : " + k.isValidMove( new Point(-1, -1), new Point(2,3)));
-
-            System.out.println( "HETMAN: " + q.isValidMove( new Point(-3, 1), new Point(-1,-1)));
-            System.out.println( "KONIK : " + k.isValidMove( new Point(0,-1), new Point(-1,0)));
-        }
-    }
-
 }
