@@ -44,15 +44,13 @@ class BalloonSpec extends Specification {
                 new Balloon("B4", 5.0),
                 new Balloon("B5", 4.0)
         ]
+
+        when:
         def sortedBalloons = new TreeSet<>(new BalloonSizeComparator())
         sortedBalloons.addAll(balloons)
 
-        when:
-        def unsortedSizes = balloons.collect { it.size() }
-        def sortedSizes = sortedBalloons.collect { it.size() }
-
         then:
-        sortedSizes == unsortedSizes.sort()
+        def sortedSizes = sortedBalloons.collect {it.size()}
         sortedSizes == [1.0, 2.0, 3.0, 4.0, 5.0]
     }
 }
