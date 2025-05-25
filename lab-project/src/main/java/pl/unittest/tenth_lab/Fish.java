@@ -10,6 +10,56 @@ package pl.unittest.tenth_lab;
     prowadziły do innej kolejności rybek po zmianie kategorii.
 */
 
-public class Fish {
+import java.util.Comparator;
 
+public class Fish {
+    private final String name;
+    private final String latinName;
+    private final double length;
+    private final double minWaterTemp;
+    private final double maxWaterTemp;
+
+    public Fish(String name, String latinName, double length, double minTemp, double maxTemp) {
+        this.name = name;
+        this.latinName = latinName;
+        this.length = length;
+        this.minWaterTemp = minTemp;
+        this.maxWaterTemp = maxTemp;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLatinName() {
+        return latinName;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public double getMinWaterTemp() {
+        return minWaterTemp;
+    }
+
+    public double getMaxWaterTemp() {
+        return maxWaterTemp;
+    }
+
+    public static Comparator<Fish> byName = (f1, f2) -> f1.getName().compareToIgnoreCase(f2.getName());
+
+    public static Comparator<Fish> byLatinName = (f1, f2) -> f1.getLatinName().compareToIgnoreCase(f2.getLatinName());
+
+    public static Comparator<Fish> byLength = Comparator.comparingDouble(Fish::getLength);
+
+    public static Comparator<Fish> byMinTempDesc = (f1, f2) -> Double.compare(f2.getMinWaterTemp(), f1.getMinWaterTemp());
+
+    public static Comparator<Fish> byMaxTemp = Comparator.comparingDouble(Fish::getMaxWaterTemp);
+
+    @Override
+    public String toString() {
+        return name + " (lat. " + latinName + ") Length: " + length +
+                " MIN_TEMP: " + minWaterTemp + " MAX_TEMP: " + maxWaterTemp;
+    }
 }
