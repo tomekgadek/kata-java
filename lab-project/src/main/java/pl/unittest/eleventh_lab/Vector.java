@@ -8,6 +8,8 @@ package pl.unittest.eleventh_lab;
     3. Po zakończeniu wprowadzania danych, wyświetla wszystkie elementy tablicy, również z użyciem konstrukcji
        "try-catch", przerywając wyświetlanie, gdy przekroczony zostanie jej zakres.
 
+    UZYCIE WYJATKOW W TAKI SPOSOB TO NIE JEST DOBRY WZOR DO NASLADOWANIA, NIE STOSUJ TEGO KODU.
+
     Wskazówka: Do obsługi losowania użyj klasy "java.util.Random", a do obsługi wyjątków użyj bloku "try-catch".
 */
 
@@ -49,14 +51,5 @@ class Vector {
                 break;
             }
         }
-    }
-}
-
-class Main {
-
-    public static void main(String[] args) {
-        double[] vector = new double[Vector.size()];
-        Vector.fill(vector);
-        Vector.show(vector);
     }
 }
