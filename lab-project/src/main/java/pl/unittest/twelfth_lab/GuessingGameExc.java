@@ -1,4 +1,4 @@
-package pl.unittest.tweltfh;
+package pl.unittest.twelfth_lab;
 
 /*
     Zdefiniuj interfejs o nazwie "GuessingGameExc" z jedną metodą:
@@ -16,10 +16,14 @@ interface GuessingGameExc {
     int MIN = 0;
     int MAX = 1000;
 
-    void isItTheNumber(int guess) throws GuessingGameExc.ArgumentTooLarge, GuessingGameExc.ArgumentTooSmall;
+    void isItTheNumber(int guess) throws
+            GuessingGameExc.ArgumentTooLarge,
+            GuessingGameExc.ArgumentTooSmall,
+            GuessingGameExc.InvalidArgumentException;
 
     class ArgumentTooLarge extends Exception {}
     class ArgumentTooSmall extends Exception {}
+    class InvalidArgumentException extends Exception {}
 }
 
 class GuessingGameExcImpl implements GuessingGameExc {
@@ -29,13 +33,12 @@ class GuessingGameExcImpl implements GuessingGameExc {
         this.guess = guess;
     }
 
-    public void isItTheNumber(int check) throws GuessingGameExc.ArgumentTooLarge, GuessingGameExc.ArgumentTooSmall {
+    public void isItTheNumber(int check) throws GuessingGameExc.ArgumentTooLarge, GuessingGameExc.ArgumentTooSmall, GuessingGameExc.InvalidArgumentException {
         final int MIN = GuessingGameExc.MIN;
         final int MAX = GuessingGameExc.MAX;
 
         if (this.guess < MIN || this.guess > MAX) {
-            // 'check' must be between MIN and MAX
-            return;
+            throw new InvalidArgumentException();
         }
 
         if (check < this.guess) {
@@ -48,7 +51,7 @@ class GuessingGameExcImpl implements GuessingGameExc {
     }
 }
 
-class Main {
+class MainGuessingGame {
 
     public static void main(String[] args) {
         GuessingGameExc guessingGame = new GuessingGameExcImpl(50);
@@ -73,6 +76,8 @@ class Main {
             } catch( GuessingGameExc.ArgumentTooSmall e) {
                 min = question;
                 question = (min + max) / 2;
+            } catch (GuessingGameExc.InvalidArgumentException e) {
+                System.err.println(e.getMessage());
             }
         }
     }
