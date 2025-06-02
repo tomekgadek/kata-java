@@ -15,9 +15,16 @@ package pl.unittest.thirteenth_lab;
         - druga do prezentacji wyniku działania.
 */
 
+import javax.swing.*;
+
 class NumberProcessor {
 
     public static void main(String[] args) {
-        System.out.println("NumberProcessor");
+
+        SwingUtilities.invokeLater(() -> {
+            NumberModel model = new NumberModel();
+            NumberView view = new NumberView();
+            new NumberController(model, view);
+        });
     }
 }
