@@ -8,9 +8,9 @@ class NumberController {
         this.model = model;
         this.view = view;
 
-        this.view.getIncrementButton().addActionListener(e -> {
+        /*this.view.getIncrementButton().addActionListener(e -> {
             model.increment();
             view.setCounterText("Licznik: " + model.getValue());
-        });
+        });*/
     }
 }
