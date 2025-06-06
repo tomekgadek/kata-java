@@ -57,8 +57,8 @@ class NumberView extends JFrame {
         return clearButton;
     }
 
-    public void setOutputText(String text) {
-        outputLabel.setText(text);
+    public JLabel getOutputText() {
+        return outputLabel;
     }
 }
 

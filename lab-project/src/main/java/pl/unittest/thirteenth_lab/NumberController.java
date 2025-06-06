@@ -8,9 +8,23 @@ class NumberController {
         this.model = model;
         this.view = view;
 
-        /*this.view.getIncrementButton().addActionListener(e -> {
-            model.increment();
-            view.setCounterText("Licznik: " + model.getValue());
-        });*/
+        this.view.getClearButton().addActionListener(e -> {
+            view.getOutputText().setText("");
+            view.getNumberField().setText("");
+        });
+
+        // TODO: Brakuje jeszcze walidacji
+        this.view.getReverseButton().addActionListener(e -> {
+            int number = Integer.parseInt(view.getNumberField().getText());
+            int reversed = model.reverseNumber(number);
+            view.getOutputText().setText(String.format("%d", reversed));
+        });
+
+        // TODO: Brakuje jeszcze walidacji
+        this.view.getOctalButton().addActionListener(e -> {
+            int number = Integer.parseInt(view.getNumberField().getText());
+            int octal = model.toOctal(number);
+            view.getOutputText().setText(String.format("%d", octal));
+        });
     }
 }
