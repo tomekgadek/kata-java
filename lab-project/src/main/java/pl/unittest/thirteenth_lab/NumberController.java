@@ -4,9 +4,14 @@ import java.util.List;
 
 class NumberController {
 
-    public NumberController(NumberModel model, NumberView view) {
+    private FieldsValidator fieldsValidator;
 
+    private void init() {
         List<Validator> validators = List.of(new EmptyFieldValidator(), new DigitFieldValidator());
+        this.fieldsValidator = new FieldsValidator(validators);
+    }
+
+    public NumberController(NumberModel model, NumberView view) {
 
         view.getClearButton().addActionListener(e -> {
             view.getOutputText().setText("");
@@ -14,6 +19,12 @@ class NumberController {
         });
 
         view.getReverseButton().addActionListener(e -> {
+            this.init();
+
+            if(!fieldsValidator.isValid(view.getNumberField().getText())) {
+                view.showErrorMessage(String.join(" ", fieldsValidator.errorMessages()));
+                return ;
+            }
 
             int number = Integer.parseInt(view.getNumberField().getText());
             int reversed = model.reverseNumber(number);
@@ -21,11 +32,16 @@ class NumberController {
         });
 
         view.getOctalButton().addActionListener(e -> {
+            this.init();
+
+            if(!fieldsValidator.isValid(view.getNumberField().getText())) {
+                view.showErrorMessage(String.join(" ", fieldsValidator.errorMessages()));
+                return ;
+            }
 
             int number = Integer.parseInt(view.getNumberField().getText());
             int octal = model.toOctal(number);
             view.getOutputText().setText(String.format("%d", octal));
         });
     }
-
 }

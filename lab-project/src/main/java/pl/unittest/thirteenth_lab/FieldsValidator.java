@@ -14,13 +14,15 @@ class FieldsValidator {
         this.messages = new ArrayList<>();
     }
 
-    public void validate(String field) {
+    public boolean isValid(String field) {
 
         this.validators.forEach(validator -> {
             if(!validator.isValid(field)) {
                 this.messages.add(validator.errorMessage());
             }
         });
+
+        return this.messages.isEmpty();
     }
 
     public List<String> errorMessages() {
