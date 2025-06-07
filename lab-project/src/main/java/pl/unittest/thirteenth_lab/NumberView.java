@@ -60,5 +60,9 @@ class NumberView extends JFrame {
     public JLabel getOutputText() {
         return outputLabel;
     }
+
+    public void showErrorMessage(String message) {
+        JOptionPane.showMessageDialog(null, message, "Błąd", JOptionPane.ERROR_MESSAGE);
+    }
 }
 
