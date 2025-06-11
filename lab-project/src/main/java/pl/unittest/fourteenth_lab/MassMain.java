@@ -53,9 +53,15 @@ package pl.unittest.fourteenth_lab;
     Warto więc zadbać, aby program dał się w ten sposób uruchomić.
 */
 
-public class MassMain {
+class MassMain {
 
     public static void main(String[] args) {
-        System.out.println("lab project.");
+
+        MassReader massReader = new MassReader();
+
+        System.out.println("Points:");
+        for(MassPoint point: massReader.loadFromInputStream()) {
+            System.out.println(point);
+        }
     }
 }
