@@ -53,6 +53,8 @@ package pl.unittest.fourteenth_lab;
     Warto więc zadbać, aby program dał się w ten sposób uruchomić.
 */
 
+import javax.swing.*;
+
 class MassMain {
 
     public static void main(String[] args) {
@@ -63,5 +65,11 @@ class MassMain {
         for(MassPoint point: massReader.loadFromInputStream()) {
             System.out.println(point);
         }
+
+        SwingUtilities.invokeLater(() -> {
+            MassModel model = new MassModel();
+            MassView view = new MassView();
+            new MassController(model, view);
+        });
     }
 }
