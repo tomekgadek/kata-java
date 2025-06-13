@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class MassReader {
+class MaterialPointReader {
 
-    List<MassPoint> loadFromInputStream() {
+    List<MaterialPoint> loadFromInputStream() {
 
         Scanner scanner = new Scanner(System.in);
         int numberOfPoints = scanner.nextInt();
 
-        List<MassPoint> points = new ArrayList<>();
+        List<MaterialPoint> points = new ArrayList<>();
         for (int i = 0; i < numberOfPoints; i++) {
-            MassPoint point =
-                    new MassPoint(Double.parseDouble(scanner.next()),
+            MaterialPoint point =
+                    new MaterialPoint(Double.parseDouble(scanner.next()),
                             Double.parseDouble(scanner.next()),
                             Double.parseDouble(scanner.next())
                     );

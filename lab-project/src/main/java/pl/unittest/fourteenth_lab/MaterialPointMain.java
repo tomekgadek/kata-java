@@ -55,21 +55,21 @@ package pl.unittest.fourteenth_lab;
 
 import javax.swing.*;
 
-class MassMain {
+class MaterialPointMain {
 
     public static void main(String[] args) {
 
-        MassReader massReader = new MassReader();
+        MaterialPointReader materialPointReader = new MaterialPointReader();
 
         System.out.println("Points:");
-        for(MassPoint point: massReader.loadFromInputStream()) {
+        for(MaterialPoint point: materialPointReader.loadFromInputStream()) {
             System.out.println(point);
         }
 
         SwingUtilities.invokeLater(() -> {
-            MassModel model = new MassModel();
-            MassView view = new MassView();
-            new MassController(model, view);
+            MaterialPointModel model = new MaterialPointModel();
+            MaterialPointView view = new MaterialPointView(new MaterialPointDrawingPanelView());
+            new MaterialPointController(model, view);
         });
     }
 }
