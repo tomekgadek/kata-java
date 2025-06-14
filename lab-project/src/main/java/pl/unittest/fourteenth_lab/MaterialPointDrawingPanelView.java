@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
-
 public class MaterialPointDrawingPanelView extends JPanel {
     private List<MaterialPoint> points;
     private boolean logScale = false;
@@ -20,6 +19,7 @@ public class MaterialPointDrawingPanelView extends JPanel {
         repaint();
     }
 
+    @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
@@ -27,7 +27,8 @@ public class MaterialPointDrawingPanelView extends JPanel {
         int w = getWidth();
         int h = getHeight();
         double maxMass = points.stream()
-                .mapToDouble(p -> logScale ? Math.log(p.mass()) : p.mass()).max().orElse(1);
+                .mapToDouble(p -> logScale ? Math.log(p.mass()) : p.mass())
+                .max().orElse(1.0);
 
         double minX = points.stream().mapToDouble(MaterialPoint::x).min().orElse(0);
         double maxX = points.stream().mapToDouble(MaterialPoint::x).max().orElse(0);
@@ -49,17 +50,22 @@ public class MaterialPointDrawingPanelView extends JPanel {
             int x1 = (int) (offsetX + points.get(i).x() * scale);
             int y1 = (int) (offsetY - points.get(i).y() * scale);
             int x2 = (int) (offsetX + points.get(i + 1).x() * scale);
-            int y2 = (int) (offsetY - points.get(i + 1).x() * scale);
+            int y2 = (int) (offsetY - points.get(i + 1).y() * scale);
             g2.drawLine(x1, y1, x2, y2);
         }
 
         // Draw points
         for (MaterialPoint p : points) {
-            double value = logScale ? Math.log(p.mass()) : p.mass();
-            double diameter = 0;
-            if (maxMass > 0) {
-                diameter = value / maxMass * 0.1 * Math.min(w, h);
-            }
+            double value = logScale
+                    ? (p.mass() > 0 ? Math.log(p.mass()) : 0.0)
+                    : p.mass();
+
+            double diameter = maxMass > 0
+                    ? (value / maxMass) * 0.1 * Math.min(w, h)
+                    : 0;
+
+            // Ensure minimum diameter
+            diameter = Math.max(diameter, 2.0);
 
             int px = (int) (offsetX + p.x() * scale);
             int py = (int) (offsetY - p.y() * scale);

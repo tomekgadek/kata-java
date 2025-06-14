@@ -21,7 +21,9 @@ class MaterialPointModel {
                             Double.parseDouble(scanner.next())
                     );
 
-            points.add(point);
+            if(point.mass() != 0.0) {
+                points.add(point);
+            }
         }
 
         scanner.close();
