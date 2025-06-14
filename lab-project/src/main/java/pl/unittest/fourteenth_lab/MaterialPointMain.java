@@ -59,16 +59,16 @@ class MaterialPointMain {
 
     public static void main(String[] args) {
 
-        MaterialPointReader materialPointReader = new MaterialPointReader();
+        final MaterialPointModel model = new MaterialPointModel();
 
         System.out.println("Points:");
-        for(MaterialPoint point: materialPointReader.loadFromInputStream()) {
+        for(MaterialPoint point: model.loadFromInputStream()) {
             System.out.println(point);
         }
 
         SwingUtilities.invokeLater(() -> {
-            MaterialPointModel model = new MaterialPointModel();
-            MaterialPointView view = new MaterialPointView(new MaterialPointDrawingPanelView());
+
+            MaterialPointView view = new MaterialPointView(new MaterialPointDrawingPanelView(model.getPoints()));
             new MaterialPointController(model, view);
         });
     }

@@ -5,18 +5,16 @@ import java.awt.*;
 
 public class MaterialPointView extends JFrame {
 
-    private final JPanel drawingPanelView;
+    private final MaterialPointDrawingPanelView drawingPanelView;
     private final JButton linearScaleButton;
     private final JButton logScaleButton;
 
-    public MaterialPointView(JPanel drawingPanelView) {
+    public MaterialPointView(MaterialPointDrawingPanelView drawingPanelView) {
         this.drawingPanelView = drawingPanelView;
 
         setTitle("MATERIAL POINTS POSITION");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        setMinimumSize(new Dimension(500, 150));
-        setSize(400, 150);
         setLocationRelativeTo(null);
         setVisible(true);
 
@@ -42,5 +40,9 @@ public class MaterialPointView extends JFrame {
 
     public JButton getLogScaleButton() {
         return this.logScaleButton;
+    }
+
+    public void setLogScale(boolean logScale) {
+        this.drawingPanelView.setLogScale(logScale);
     }
 }

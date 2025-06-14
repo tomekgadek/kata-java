@@ -6,12 +6,12 @@ public class MaterialPointController {
 
         view.getLinearScaleButton().addActionListener(ActionEvent -> {
 
-            System.out.println("linear scale");
+            view.setLogScale(false);
         });
 
         view.getLogScaleButton().addActionListener(ActionEvent -> {
-           System.out.println("log scale");
+
+            view.setLogScale(true);
         });
     }
-
 }

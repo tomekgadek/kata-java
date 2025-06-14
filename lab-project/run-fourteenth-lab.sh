@@ -3,7 +3,7 @@
 # Ustawienia katalogów
 SRC_DIR="src/main/java"
 OUT_DIR="out"
-MAIN_CLASS="pl.unittest.fourteenth_lab.MassMain"
+MAIN_CLASS="pl.unittest.fourteenth_lab.MaterialPointMain"
 
 # Domyślny numer testu = 1, jeśli nie podano
 TEST_NUM=${1:-1}
