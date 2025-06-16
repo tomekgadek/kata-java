@@ -5,7 +5,7 @@ import java.awt.*;
 import java.util.List;
 
 public class MaterialPointDrawingPanelView extends JPanel {
-    private List<MaterialPoint> points;
+    private final List<MaterialPoint> points;
     private boolean logScale = false;
 
     public MaterialPointDrawingPanelView(List<MaterialPoint> points) {

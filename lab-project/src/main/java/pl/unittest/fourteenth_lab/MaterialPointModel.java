@@ -6,14 +6,13 @@ import java.util.Scanner;
 
 class MaterialPointModel {
 
-    private List<MaterialPoint> points = new ArrayList<>();
+    private final List<MaterialPoint> points;
 
-    List<MaterialPoint> loadFromInputStream() {
-
+    private MaterialPointModel() {
         Scanner scanner = new Scanner(System.in);
         int numberOfPoints = scanner.nextInt();
 
-        points = new ArrayList<>();
+        this.points = new ArrayList<>();
         for (int i = 0; i < numberOfPoints; i++) {
             MaterialPoint point =
                     new MaterialPoint(Double.parseDouble(scanner.next()),
@@ -22,16 +21,18 @@ class MaterialPointModel {
                     );
 
             if(point.mass() != 0.0) {
-                points.add(point);
+                this.points.add(point);
             }
         }
 
         scanner.close();
-
-        return points;
     }
 
-    public List<MaterialPoint> getPoints() {
+    public static MaterialPointModel loadPointsFromInputStream() {
+        return new MaterialPointModel();
+    }
+
+    public List<MaterialPoint> points() {
         return this.points;
     }
 }

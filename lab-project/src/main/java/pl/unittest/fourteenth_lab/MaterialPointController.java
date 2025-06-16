@@ -2,7 +2,7 @@ package pl.unittest.fourteenth_lab;
 
 public class MaterialPointController {
 
-    public MaterialPointController(MaterialPointModel model, MaterialPointView view) {
+    public MaterialPointController(MaterialPointView view) {
 
         view.getLinearScaleButton().addActionListener(ActionEvent -> {
 
