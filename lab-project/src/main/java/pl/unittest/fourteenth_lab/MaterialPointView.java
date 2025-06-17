@@ -3,7 +3,7 @@ package pl.unittest.fourteenth_lab;
 import javax.swing.*;
 import java.awt.*;
 
-public class MaterialPointView extends JFrame {
+class MaterialPointView extends JFrame {
 
     private final MaterialPointDrawingPanelView drawingPanelView;
     private final JButton linearScaleButton;
@@ -12,7 +12,7 @@ public class MaterialPointView extends JFrame {
     public MaterialPointView(MaterialPointDrawingPanelView drawingPanelView) {
         this.drawingPanelView = drawingPanelView;
 
-        setTitle("MATERIAL POINTS POSITION");
+        setTitle(Ui.APP_TITLE.message());
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         setLocationRelativeTo(null);
@@ -20,8 +20,8 @@ public class MaterialPointView extends JFrame {
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        linearScaleButton = new JButton("skala liniowa");
-        logScaleButton = new JButton("skala logarytmiczna");
+        linearScaleButton = new JButton(Ui.LIN_BUTTON.message());
+        logScaleButton = new JButton(Ui.LOG_BUTTON.message());
 
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(linearScaleButton);
