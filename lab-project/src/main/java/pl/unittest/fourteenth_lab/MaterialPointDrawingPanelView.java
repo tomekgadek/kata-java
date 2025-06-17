@@ -35,14 +35,27 @@ public class MaterialPointDrawingPanelView extends JPanel {
         double minY = points.stream().mapToDouble(MaterialPoint::y).min().orElse(0);
         double maxY = points.stream().mapToDouble(MaterialPoint::y).max().orElse(0);
 
+        // Calculate max point diameter
+        double maxDiameter = maxMass > 0 ? 0.1 * Math.min(w, h) : 2.0;
+
         double rangeX = maxX - minX;
         double rangeY = maxY - minY;
-        double scaleX = (w * 0.9) / (rangeX == 0 ? 1 : rangeX);
-        double scaleY = (h * 0.9) / (rangeY == 0 ? 1 : rangeY);
+
+        // Calculate padding based on range
+        double padding = Math.max(rangeX, rangeY) * 0.1;
+
+        // Adjust ranges with padding
+        rangeX += 2 * padding;
+        rangeY += 2 * padding;
+
+        // Adjust scale to account for point sizes and padding
+        double scaleX = (w - maxDiameter) / rangeX;
+        double scaleY = (h - maxDiameter) / rangeY;
         double scale = Math.min(scaleX, scaleY);
 
-        double offsetX = w / 2.0;
-        double offsetY = h / 2.0;
+        // Calculate offsets to center the drawing
+        double offsetX = (w - (maxX + minX) * scale) / 2.0;
+        double offsetY = (h + (maxY + minY) * scale) / 2.0;
 
         // Draw lines between points
         g2.setColor(Color.GRAY);
@@ -56,13 +69,8 @@ public class MaterialPointDrawingPanelView extends JPanel {
 
         // Draw points
         for (MaterialPoint p : points) {
-            double value = logScale
-                    ? (p.mass() > 0 ? Math.log(p.mass()) : 0.0)
-                    : p.mass();
-
-            double diameter = maxMass > 0
-                    ? (value / maxMass) * 0.1 * Math.min(w, h)
-                    : 0;
+            double value = logScale ? (p.mass() > 0 ? Math.log(p.mass()) : 0.0) : p.mass();
+            double diameter = maxMass > 0 ? (value / maxMass) * maxDiameter : 0;
 
             // Ensure minimum diameter
             diameter = Math.max(diameter, 2.0);
