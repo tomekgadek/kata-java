@@ -44,4 +44,5 @@ _Zbiór prostych programów zaimplementowanych w języku Java._
 + [Laboratorium 02: Obwód trójkąta](./lab-project/src/main/java/pl/unittest/second_lab/Triangle.java),
 + [Laboratorium 03: Macierz symetryczna](./lab-project/src/main/java/pl/unittest/third_lab/SymmetricMatrix.java),
 + [Laboratorium 04: Macierz rzadka](./lab-project/src/main/java/pl/unittest/fourth_lab/SparseMatrix.java),
-+ [Laboratorium 05: Środek masy i środek geometryczny](./lab-project/src/main/java/pl/unittest/fifth_lab/PointAndMaterialPoint.java).
++ [Laboratorium 05: Środek masy i środek geometryczny](./lab-project/src/main/java/pl/unittest/fifth_lab/PointAndMaterialPoint.java),
++ [Labotatorium 06: Odgadywanie wylosowanej liczby](./lab-project/src/main/java/pl/unittest/sixth_lab/GuessingGame.java).
