@@ -49,4 +49,5 @@ _Zbiór prostych programów zaimplementowanych w języku Java._
 + [Laboratorium 07: Podstawowe operacje bankowe](./lab-project/src/main/java/pl/unittest/seventh_lab/BankOperations.java),
 + [Laboratorium 08: Zasady gry w szachy](./lab-project/src/main/java/pl/unittest/eighth_lab/Chess.java),
 + [Laboratorium 09: Zastosowanie interfejsu Comparator w praktyce](./lab-project/src/main/java/pl/unittest/ninth_lab/Balloon.java),
-+ [Laboratorium 10: Klasy i interfejs Comparator](./lab-project/src/main/java/pl/unittest/tenth_lab/Fish.java).
++ [Laboratorium 10: Klasy i interfejs Comparator](./lab-project/src/main/java/pl/unittest/tenth_lab/Fish.java),
++ [Laboratorium 11: Praktyczne zastosowanie wyjatkow](./lab-project/src/main/java/pl/unittest/eleventh_lab/Vector.java).
