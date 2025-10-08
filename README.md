@@ -51,4 +51,5 @@ _Zbiór prostych programów zaimplementowanych w języku Java._
 + [Laboratorium 09: Zastosowanie interfejsu Comparator w praktyce](./lab-project/src/main/java/pl/unittest/ninth_lab/Balloon.java),
 + [Laboratorium 10: Klasy i interfejs Comparator](./lab-project/src/main/java/pl/unittest/tenth_lab/Fish.java),
 + [Laboratorium 11: Praktyczne zastosowanie wyjatkow](./lab-project/src/main/java/pl/unittest/eleventh_lab/Vector.java),
-+ [Laboratorium 12: Gra typu 'zgadywanka'](./lab-project/src/main/java/pl/unittest/twelfth_lab/GuessingGameExc.java).
++ [Laboratorium 12: Gra typu 'zgadywanka'](./lab-project/src/main/java/pl/unittest/twelfth_lab/GuessingGameExc.java),
++ [Laboratorium 13: Operacje na liczbach całkowitych](./lab-project/src/main/java/pl/unittest/thirteenth_lab/NumberProcessor.java).
