@@ -20,7 +20,7 @@ Zadania
 
 Wzorce projektowe
 ----------------------------
-001. [Kreacyjny wzorzec projektowy: Metoda wytwórcza (Factory method)](/patterns/facroryMethod.java),
+001. [Kreacyjny wzorzec projektowy: Metoda wytwórcza (Factory method)](/patterns/factoryMethod.java),
 002. [Kreacyjny wzorzec projektowy: Singleton](/patterns/singleton.java),
 003. [Architektoniczny wzorzec projektowy: Model-View-Controller (MVC)](/patterns/mvc.java).
 
@@ -34,7 +34,8 @@ Graficzny interfejs użytkownika, Swing i AWT
 006. [Wykorzystanie myszki w grafice 2D](/ui/mouse2d.java),
 007. [Obsługa przycisków](/ui/buttons.java),
 008. [Obsługa obrazków](/ui/images.java),
-009. [Animacja](/ui/animation.java).
+009. [Animacja](/ui/animation.java),
+010. [Edytor HTML](./ui/htmlEditor.java)
 
 Laboratorium online
 ----------------------------
