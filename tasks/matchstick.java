@@ -1,11 +1,11 @@
 /*
     GRA W ZAPAŁKI
 
-    ZASADA GRY:
+    ZASADY GRY:
     Na stole znajduje się określona liczba zapałek (np. 16).
     Dwóch graczy na zmianę zabiera ze stosu 1, 2 lub 3 zapałki.
     Przegrywa ten, kto weźmie ostatnią zapałkę.
-    Celem gracza jest więc doprowadzenie przeciwnika do sytuacji,
+    Celem gracza jest doprowadzenie przeciwnika do sytuacji,
     w której musi wziąć ostatnią zapałkę.
 
     Program pozwala na rozgrywkę między dwoma użytkownikami.
@@ -112,11 +112,9 @@ class GameEngine {
                 break;
             }
 
-            // Switch players
             currentPlayer = (turn++ % 2 == 0) ? player2 : player1;
         }
 
-        // Winner is the player who did NOT take the last match
         Player winner = (currentPlayer == player1) ? player2 : player1;
         winner.setWinner();
 
