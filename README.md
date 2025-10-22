@@ -16,7 +16,8 @@ Zadania
 011. [Jak przeciążyć nazwę funkcji?](/tasks/overloading.java),
 012. [Polimorfizm a punkty w przestrzeni](/tasks/points.java),
 013. [Generator ciągu Fibonacciego](/tasks/fibonacci.java),
-014. [Wątki, które oddzielają liczby parzyste od nieparzystych](/tasks/evenAndOdd.java).
+014. [Wątki, które oddzielają liczby parzyste od nieparzystych](/tasks/evenAndOdd.java),
+015. [Gra w zapałki](/tasks/matchstick.java).
 
 Wzorce projektowe
 ----------------------------
