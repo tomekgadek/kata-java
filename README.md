@@ -17,7 +17,8 @@ Zadania
 012. [Polimorfizm a punkty w przestrzeni](/tasks/points.java),
 013. [Generator ciągu Fibonacciego](/tasks/fibonacci.java),
 014. [Wątki, które oddzielają liczby parzyste od nieparzystych](/tasks/evenAndOdd.java),
-015. [Gra w zapałki](/tasks/matchstick.java).
+015. [Gra w zapałki](/tasks/matchstick.java),
+016. [Gra w statki](/tasks/battleShip.java).
 
 Wzorce projektowe
 ----------------------------
