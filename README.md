@@ -18,7 +18,8 @@ Zadania
 013. [Generator ciągu Fibonacciego](/tasks/fibonacci.java),
 014. [Wątki, które oddzielają liczby parzyste od nieparzystych](/tasks/evenAndOdd.java),
 015. [Gra w zapałki](/tasks/matchstick.java),
-016. [Gra w statki](/tasks/battleShip.java).
+016. [Gra w statki](/tasks/battleShip.java),
+017. [Bieg na 100m](/tasks/race100m.java).
 
 Wzorce projektowe
 ----------------------------
