@@ -21,6 +21,10 @@ Zadania
 016. [Gra w statki](/tasks/battleShip.java),
 017. [Bieg na 100m](/tasks/race100m.java).
 
+Szyfry proste
+----------------------------
+001. [Szyfr xor](/ciphers/xor/Main.java).
+
 Wzorce projektowe
 ----------------------------
 001. [Kreacyjny wzorzec projektowy: Metoda wytwórcza (Factory method)](/patterns/factoryMethod.java),
